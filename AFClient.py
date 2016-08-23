@@ -7,8 +7,8 @@ i=0
 fp = open('clog.txt', 'a')            # Create a socket object     # Get local machine name
 s = socket.socket()
 port = 60000                    # Reserve a port for your service.
-s.bind(('10.100.0.6', 60001))
-s.connect(('10.100.0.5', 60001))
+s.bind(('10.100.0.6', port))
+s.connect(('10.100.0.5', port))
 
 #except :
 #    s.close()

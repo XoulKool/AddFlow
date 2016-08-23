@@ -1,5 +1,5 @@
 # AddFlow
-### Note This Test Needs Debugging
+### Note: This Test Needs Debugging
 The most basic test which was completed Summer 2016 on our system.  This test will calculate the amount
 of time it takes to add a flow and for the servers in our system to achieve their connection.
 
@@ -46,5 +46,24 @@ and on Server6
 
 `rm clog.txt`
 
-Now we can run through tehe test procedure.
+Now we can run through the test procedure.
+
+On Server5, run command 
+
+`python AFServer.py`
+
+to begin listening Server.
+
+Then on grnlntrn server run command [well first do `cd app` so you are in the right directory] 
+
+`ryu-manager --verbose add_flow.py`
+
+and now wait until you see on the grnlntrn terminal that the switch has entered into main mode.  Once it has, on Server6 run command
+
+`python AFClient.py`
+
+You should see that the flows were installed and the connections were made.  Then to compare the times view sslog1.txt in grnlntrn terminal and view clog.txt in Server6 terminal.  The time (in EPOCH mircoseconds) should be slightly smaller in clog.txt than in sslog1.txt.  This is because the client asks for its connection first.  and the reason why we are looking at sslog1.txt first is because once the flow from server6 to server5 is installed first will.  Once you are done analyzing these two times, take a look at sslog2.txt and slog.txt.  The time in sslog2.txt should be slightly smaller than in slog.txt because the connection between the two servers will not be fully functional until the fnal flow is installed.
+So the times should look like client-grnlntrn-grnlntrn-listening server.
+If you would like to repeat this test then be sure to delete the flows and run through this procedure as many times as you would like.
+
 

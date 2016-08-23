@@ -27,6 +27,7 @@ Create a new terminal. ssh into grnlntrn and then ssh into Server5 in our networ
 [In grnlntrn server, run command `ssh 10.0.0.5`]
 
 Create a new terminal.  ssh into grnlntrn and then ssh into Server6 in our network
+
 [In grnlntrn server, run command `ssh 10.0.0.6`]
 
 You should now have four terminals on display.  One for the Pica8 switch (which by default should be in OVS mode), one for the grnlntrn server, one for Server5, and one for Server6.

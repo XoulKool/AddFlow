@@ -4,7 +4,7 @@ import sys
 
 fp = open('slog.txt', 'a')
 
-port = 60001                    # Reserve a port for your service.
+port = 60000                    # Reserve a port for your service.
 s = socket.socket()             # Create a socket object
 #host = socket.gethostname()     # Get local machine name
 s.bind(('10.100.0.5', port))            # Bind to the port  [Use whatever IP address necessary for your situation]

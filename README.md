@@ -1,4 +1,5 @@
 # AddFlow
+### Note This Test Needs Debugging
 The most basic test which was completed Summer 2016 on our system.  This test will calculate the amount
 of time it takes to add a flow and for the servers in our system to achieve their connection.
 
@@ -31,4 +32,19 @@ Create a new terminal.  ssh into grnlntrn and then ssh into Server6 in our netwo
 [In grnlntrn server, run command `ssh 10.0.0.6`]
 
 You should now have four terminals on display.  One for the Pica8 switch (which by default should be in OVS mode), one for the grnlntrn server, one for Server5, and one for Server6.
+
+The final preliminary step is to delete any log files which may have been used for prior tests, just so you don't get confused with your data.  So on grnlntrn be sure to
+
+`rm sslog1.txt` and
+`rm sslog2.txt`
+
+On Server5
+
+`rm slog.txt`
+
+and on Server6
+
+`rm clog.txt`
+
+Now we can run through tehe test procedure.
 

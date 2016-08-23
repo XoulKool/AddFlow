@@ -8,10 +8,26 @@ testing just the addition of the flow.  We can delete all the flows in the table
 
 `ovs-ofctl del-flows br0`
 
-Another important note is that all tests, save the last one use OpenFlow Version 1.0.  To set this on the Pica8 switch use command
+Another important note is that all tests, save the last, one use OpenFlow Version 1.0.  To set this on the Pica8 switch use command
 
 `ovs-vsctl set Bridge br0 protocols=OpenFlow10`
 
 Now that all the preliminary steps are taken care of, the procedure for the test is as follows:
 
+Create a new terminal. ssh into grnlntrn 
+
+[`ssh root@grnlntrn.cis.temple.edu`]
+
+Create a new terminal.  ssh again into grnlntrn and then ssh into the Pica8 Switch 
+
+[remember must use username admin - `ssh admin@10.2.0.2` - do this in grnlntrn server]
+
+Create a new terminal. ssh into grnlntrn and then ssh into Server5 in our network 
+
+[In grnlntrn server, run command `ssh 10.0.0.5`]
+
+Create a new terminal.  ssh into grnlntrn and then ssh into Server6 in our network
+[In grnlntrn server, run command `ssh 10.0.0.6`]
+
+You should now have four terminals on display.  One for the Pica8 switch (which by default should be in OVS mode), one for the grnlntrn server, one for Server5, and one for Server6.
 
